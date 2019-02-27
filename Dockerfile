@@ -1,7 +1,6 @@
 FROM python:3.6-slim
 
-RUN cd /var/www/app && git init \
-    && git remote add origin http://housong:pss123546@git.jiankanghao.net/haiwei/chaos.git
+RUN git clone https://github.com/housong12590/gongfudou_data.git /var/www/app
 
 RUN cd /var/www/app
 COPY . /var/www/app/
