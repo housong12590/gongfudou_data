@@ -1,7 +1,7 @@
 from db.db_helper import SQLHelper
 
 users = """
-    CREATE TABLE IF NOT EXISTS movies(
+    CREATE TABLE IF NOT EXISTS users(
       id INT PRIMARY KEY AUTO_INCREMENT,
       nickname VARCHAR(255) ,
       city VARCHAR(255),
