@@ -5,15 +5,15 @@ import time
 
 last_id = 0
 
+
 def main():
     global last_id
     url = 'http://gongfudou.com/insight/map/designs?count=5&last={}'.format(last_id)
     ret = requests.get(url)
-    print(url)
-    print(ret.text)
     if ret.status_code == 200:
         try:
             data = json.loads(ret.text, encoding='utf8')
+            print(len(data))
             for item in data:
                 origin_id = item.get('id')
                 lat = item.get('map_x')
