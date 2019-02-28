@@ -16,8 +16,8 @@ def main():
             print(len(data))
             for item in data:
                 origin_id = item.get('id')
-                lat = item.get('map_x')
-                lng = item.get('map_y')
+                lng = item.get('map_x')
+                lat = item.get('map_y')
                 nickname = item.get('nickname')
                 city = item.get('region_name')
                 avatar = item.get('headimgurl')
