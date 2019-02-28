@@ -21,6 +21,8 @@ def main():
                 nickname = item.get('nickname')
                 city = item.get('region_name')
                 avatar = item.get('headimgurl')
+                if lng is None:
+                    continue
                 SQLHelper.execute(
                     'INSERT INTO users(nickname,city,avatar,lat,lng,origin_id) VALUES (%s,%s,%s,%s,%s,%s)',
                     (nickname, city, avatar, lat, lng, origin_id))
@@ -33,3 +35,4 @@ if __name__ == '__main__':
     while True:
         main()
         time.sleep(1)
+        break
