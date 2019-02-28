@@ -3,7 +3,7 @@ from db.db_helper import SQLHelper
 users = """
     CREATE TABLE IF NOT EXISTS users(
       id INT PRIMARY KEY AUTO_INCREMENT,
-      nickname VARCHAR(255) ,
+      nickname VARCHAR(255) NOT NULL UNIQUE,
       city VARCHAR(255),
       avatar VARCHAR(255) ,
       lng VARCHAR(255) ,
